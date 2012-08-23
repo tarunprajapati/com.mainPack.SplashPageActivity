@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="homePageHeader">TransitChatter</string>
+    <string name="app_name">TransitChatter</string>
+    <string name="tab1Chat">CTA Chat</string>
+    <string name="tab2tracker">Tracker</string>
+    <string name="tab3ScreenName">Screename</string>
+
+</resources>

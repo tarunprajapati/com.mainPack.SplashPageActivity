@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel_current_user"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sizesOfHeader"       
+        android:background="@drawable/info_panel_bkg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/textV_logo_current_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="Username:"
+            android:textSize="16sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/textV_chat_room_current_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/textV_logo_current_user_name"
+            android:gravity="center"
+            android:text="Tarun"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_currently_chatting_users"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_current_user"      
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" >
+
+        <TextView
+            android:id="@+id/textV_logo_currently_users_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="Currently chatting:"
+            android:textSize="16sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <ListView
+            android:id="@+id/list_view_list_of_users"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/textV_logo_currently_users_list"
+            android:divider="#00000000"
+            android:fadingEdge="none"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:cacheColorHint="@null" 
+            >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

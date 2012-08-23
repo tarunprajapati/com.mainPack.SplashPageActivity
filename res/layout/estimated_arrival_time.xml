@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sizesOfHeader"
+        android:background="@drawable/bg_search" >
+
+        <RelativeLayout
+            android:id="@+id/rel_header_img_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp" >
+
+            <Button
+                android:id="@+id/img_train_chat_line_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/blue_list"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textV_train_chat_line_item_titele"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/img_train_chat_line_title"
+                android:text="Blue Line"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/textV_train_chat_line_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textV_train_chat_line_item_titele"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/img_train_chat_line_title"
+                android:text="Normal Service"
+                android:textColor="#ffffff"
+                android:textSize="12sp" 
+                android:singleLine="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_refesh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"            
+            android:gravity="center"
+            android:text="Refresh"
+            android:layout_margin="5dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_stop_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:background="@drawable/stop_info_bkg"
+        android:paddingBottom="2dp" >
+
+        <RelativeLayout
+            android:id="@+id/rel_fav"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/textV_route_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageButtonFavorite"
+                android:singleLine="true"               
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/imageButtonFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/favorite_star_deselected" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textV_route_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rel_fav"
+            android:paddingLeft="5dp"            
+            android:singleLine="true"
+            android:textColor="#696969"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rel_swap_route"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_route_detail"
+            android:layout_marginBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/textV_route_subdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageButtonDirectionChange"
+                android:singleLine="true"
+                android:textColor="#696969"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/imageButtonDirectionChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/direction_switch_default_btn"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textV_show_no_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_stop_info"
+        android:gravity="center"
+        android:padding="25dp"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:text="There is currently no arrival time information for this stop"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/textV_notice"
+        android:layout_below="@+id/rel_stop_info"
+        android:layout_margin="5dp"
+        android:divider="#00000000"
+        android:fastScrollEnabled="true"
+        android:smoothScrollbar="true" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/textV_notice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"        
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Tap route for chatting, deal and more" />
+
+</RelativeLayout>

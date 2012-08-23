@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sizesOfHeader"
+        android:background="@drawable/bg_search"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <Button
+            android:id="@+id/btn_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Fovorites" />
+
+        <Button
+            android:id="@+id/btn_bus_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/btn_favorites"
+            android:text="Nearby" />
+
+        <Button
+            android:id="@+id/btn_all_routes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/btn_bus_nearby"
+            android:text="All Routes" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editT_search_route"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/search_bar"
+        android:paddingLeft="55dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:hint="Search"
+        android:singleLine="true"/>
+
+    <ListView
+        android:id="@+id/list_view_all_routes"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/editT_search_route" 
+        android:divider="#00000000">
+    </ListView>
+
+</RelativeLayout>

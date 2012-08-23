@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+	
+    <TextView android:id="@+id/textV_logoScreenName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Screenname:"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:gravity="center_horizontal|center_vertical"
+        />
+    
+    <TextView android:id="@+id/textV_screenName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Tarun"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textV_logoScreenName"/>
+    
+    <Button android:id="@+id/btn_change_screen_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textV_screenName"
+        android:text="Change Screename"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    
+
+</RelativeLayout>

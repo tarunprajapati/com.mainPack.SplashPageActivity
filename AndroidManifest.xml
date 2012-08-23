@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mainPack"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:name="com.application.MyApplication" >
+        <activity
+            android:name=".SplashPageActivity"
+            android:screenOrientation="portrait" android:clearTaskOnLaunch="true" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Tab Group -->
+        <activity android:name="com.tabPack.Tabactivity" android:configChanges="orientation" android:clearTaskOnLaunch="true" >
+        </activity>
+        <activity android:name="com.tabPack.tabGroup1.TabGroup1" android:configChanges="orientation">
+        </activity>
+        <activity android:name="com.tabPack.tabGroup1.HomePageActivity" android:configChanges="orientation" >
+        </activity>
+        <activity android:name="com.tabPack.tabGroup1.train.TrainChatListActivity"  >
+        </activity>
+        <activity android:name="com.tabPack.tabGroup1.train.TrainChatLineListActivity" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.tabPack.tabGroup1.train.TrainChatRoomActivity" >
+        </activity>
+        <activity android:name="com.tabPack.tabGroup1.bus.BusChatListActivity" >
+        </activity>
+        <activity android:name="com.tabPack.tabGroup1.bus.BusChatLineListActivity" >
+        </activity>
+        <activity android:name="com.tabPack.tabGroup2.TabGroup2" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.tabPack.tabGroup2.FavoriteRoutesActivity" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:name="com.tabPack.tabGroup2.RouteStopsActivity" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.tabPack.tabGroup2.ArrivalTimeListActivity" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.tabPack.tabGroup2.NearbyRouteListActivity" >
+        </activity>
+        <activity android:name="com.tabPack.tabGroup3.TabGroup3" >
+        </activity>
+        <activity android:name="com.tabPack.tabGroup3.ChangeScreenNameActivity" android:configChanges="orientation" >
+        </activity>
+
+        <service
+            android:enabled="true"
+            android:name="com.service.BroadCastSericeForCallsApi" >
+        </service>
+        <service
+            android:enabled="true"
+            android:name="com.service.BroadcastService" >
+        </service>
+    </application>
+
+</manifest>

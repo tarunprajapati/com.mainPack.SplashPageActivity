@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sizesOfHeader"
+        android:background="@drawable/bg_search"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/textV_header_change_screenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Enter Screen Name"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_change_name_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Cancel" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_cotent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:padding="40dp" >
+
+        <TextView
+            android:id="@+id/textV_logo_newName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Screename:"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editT_new_screen_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_logo_newName"
+            android:layout_marginTop="10dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_save_screen_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editT_new_screen_name"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Start Chating"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

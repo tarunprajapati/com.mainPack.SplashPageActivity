@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_chat_box"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/chat_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rel_rect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ract" >
+
+            <TextView
+                android:id="@+id/textV_chatter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="stedddddddddddddve"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textV_msg_days_ago"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="1 day agoffffffffffffffffffffff"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/chat_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/textV_chatter_name"
+                android:background="@drawable/pointer" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_msgBodyBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_rect"
+            android:layout_marginTop="-35dp" >
+
+           
+            <EditText
+                android:id="@+id/textV_chat_msg_body"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgV_topCorner"
+                android:layout_centerInParent="true"
+                android:background="@drawable/comment_box"
+                android:editable="false"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="is This Tarun ddfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffffffffffffffffffffffffffffffff"
+                android:textColor="#000000" />
+
+           
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
