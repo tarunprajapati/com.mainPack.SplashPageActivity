@@ -36,6 +36,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 
+//Main Function
 public class MyApplication extends Application
 {
 	public static DefaultHttpClient client;	
