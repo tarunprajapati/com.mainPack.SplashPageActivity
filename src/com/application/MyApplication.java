@@ -74,6 +74,7 @@ public class MyApplication extends Application
 		return listBusChatLine;
 	}
 
+	//sets list for bus chat line
 	public void setListBusChatLine(
 			ArrayList<ArrayList<ArrayList<String>>> listBusChatLine) {
 		this.listBusChatLine = listBusChatLine;
